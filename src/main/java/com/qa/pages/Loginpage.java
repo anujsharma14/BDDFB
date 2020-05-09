@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Loginpage {
+import com.qa.util.TestBase;
+
+public class Loginpage extends TestBase {
 	public Loginpage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -18,6 +20,6 @@ public class Loginpage {
 	@FindBy(id = "pass")
 	public WebElement passid;
 	@FindBy(xpath = "//input[@type='submit']")
-	public WebElement loginbtn;
+	public static  WebElement loginbtn;
 
 }

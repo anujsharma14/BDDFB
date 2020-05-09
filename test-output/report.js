@@ -21,15 +21,16 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "user on login page",
+  "name": "user click on login btn",
   "keyword": "When "
 });
 formatter.step({
-  "line": 7,
-  "name": "user clicks on login button",
-  "keyword": "Then "
-});
-formatter.step({
+  "comments": [
+    {
+      "line": 7,
+      "value": "#Then user is on login page"
+    }
+  ],
   "line": 8,
   "name": "user enters username and password",
   "keyword": "Then "
@@ -38,22 +39,15 @@ formatter.match({
   "location": "LoginStepDefinition.user_launches_browser()"
 });
 formatter.result({
-  "duration": 23859920699,
-  "status": "passed"
-});
-formatter.match({
-  "location": "LoginStepDefinition.user_on_login_page()"
-});
-formatter.result({
-  "duration": 13682401,
+  "duration": 18546245900,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_clicks_on_login_button()"
 });
 formatter.result({
-  "duration": 98515700,
-  "error_message": "java.lang.NullPointerException\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy14.click(Unknown Source)\r\n\tat com.qa.stepdefinition.LoginStepDefinition.user_clicks_on_login_button(LoginStepDefinition.java:34)\r\n\tat ✽.Then user clicks on login button(D:/New folder/FBLogingBDD/src/main/java/com/qa/features/Login.feature:7)\r\n",
+  "duration": 1303400,
+  "error_message": "java.lang.NullPointerException\r\n\tat com.qa.util.TestBase.loginbuttton(TestBase.java:53)\r\n\tat com.qa.stepdefinition.LoginStepDefinition.user_clicks_on_login_button(LoginStepDefinition.java:34)\r\n\tat ✽.When user click on login btn(D:/New folder/FBLogingBDD/src/main/java/com/qa/features/Login.feature:6)\r\n",
   "status": "failed"
 });
 formatter.match({

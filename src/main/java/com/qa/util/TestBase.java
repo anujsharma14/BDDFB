@@ -10,8 +10,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.junit.Assert;
 
 import com.qa.pages.Loginpage;
+
+//import junit.framework.Assert;
 
 public class TestBase {
 	public static WebDriver driver;
@@ -45,9 +48,10 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(TestUtil.implicit_wait_time, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 	}
-
-	public void loginbuttton(WebElement element) {
+    
+	public static void loginbuttton(WebElement element) {
 		element.click();
-
 	}
+	
+	
 }
